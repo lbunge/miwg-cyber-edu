@@ -2,6 +2,7 @@
 cls
 SetLocal
 set scripts="C:\scripts"
+set branch="%scripts%\branch"
 echo ----------------------------------------------------------------
 echo --                                                            --
 echo --             Welcome To MIWG Cyber Education                --
@@ -32,14 +33,16 @@ echo ---------------------------------------------------------------
 pause
 exit /b
 
-REM Cases being called
+REM Cases being called. Need to have an empty directory to clone into
 :case_1
 	echo Downloading Branch One
-	git clone https://github.com/lbunge/miwg-cyber-edu.git --branch test-branch %scripts%
+	git clone https://github.com/lbunge/miwg-cyber-edu.git --branch test-branch %branch%
+	"%branch%\test-branch-script.bat"
 	goto :eof
 :case_2
 	echo Downloading Branch Two
-	git clone https://github.com/lbunge/miwg-cyber-edu.git --branch test-branch-two %scripts%
+	git clone https://github.com/lbunge/miwg-cyber-edu.git --branch test-branch-two %branch%
+	"%branch%\test-branch-two-script.bat"
 	goto :eof
 :case_3
 	echo case three
