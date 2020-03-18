@@ -11,5 +11,6 @@ if EXIST %homedir% (
 
 "%homedir%\current\updateVM.bat"
 
-REM rm -rf %homedir%
+REM removes script directory to clean up
+rm -rf %homedir%
 
