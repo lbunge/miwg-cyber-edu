@@ -1,7 +1,7 @@
 @echo off
 cls
 SetLocal
-set scripts="C:\scripts"
+set scripts="%USERPROFILE%\scripts"
 set branch="%scripts%\branch"
 echo ----------------------------------------------------------------
 echo --                                                            --
