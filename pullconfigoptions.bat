@@ -1,6 +1,6 @@
 REM Stored locally on VM to pull latest configuration options script
 SetLocal
-set homedir="C:\scripts"
+set homedir="%USERPROFILE%\scripts"
 
 REM Creates scripts folder and downloads configoptions script
 if EXIST %homedir% (
