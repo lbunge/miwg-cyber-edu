@@ -3,10 +3,10 @@ SetLocal
 set homedir="C:\scripts"
 
 if EXIST %homedir% (
-	git clone "https://github.com/lbunge/miwg-cyber-edu" %homedir%
+	curl -L https://raw.githubusercontent.com/lbunge/miwg-cyber-edu/master/options.bat -o "%homedir%\options.bat"
 ) ELSE (
 	md %homedir%
-	git clone "https://github.com/lbunge/miwg-cyber-edu" %homedir%
+	curl -L https://raw.githubusercontent.com/lbunge/miwg-cyber-edu/master/options.bat -o "%homedir%\options.bat"
 )
 
 "%homedir%\current\updateVM.bat"
