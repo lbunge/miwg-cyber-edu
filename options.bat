@@ -1,6 +1,7 @@
 @echo off
 cls
 SetLocal
+set scripts="C:\scripts"
 echo ----------------------------------------------------------------
 echo --                                                            --
 echo --             Welcome To MIWG Cyber Education                --
@@ -10,8 +11,8 @@ echo --            Your VM Will Be Updated Afterwards              --
 echo --                                                            --
 echo ----------------------------------------------------------------
 echo.
-echo    1. Introduction to Windows OS
-echo    2. Introduction to the Command Line
+echo    1. Test Branch One
+echo    2. Test Branch Two
 echo    3. Introduction to Powershell
 echo.
 
@@ -24,16 +25,21 @@ REM If error was entered go to default case
 if errorlevel 1 call :default_case
 
 REM Final commands
-echo done
+echo ---------------------------------------------------------------
+echo --                Your VM is now configured                  --
+echo --                     Happy Hunting!                        --
+echo ---------------------------------------------------------------       
 pause
 exit /b
 
 REM Cases being called
 :case_1
-	echo case one
+	echo Downloading Branch One
+	git clone https://github.com/lbunge/miwg-cyber-edu.git --branch test-branch %scripts%
 	goto :eof
 :case_2
-	echo case two
+	echo Downloading Branch Two
+	git clone https://github.com/lbunge/miwg-cyber-edu.git --branch test-branch-two %scripts%
 	goto :eof
 :case_3
 	echo case three
